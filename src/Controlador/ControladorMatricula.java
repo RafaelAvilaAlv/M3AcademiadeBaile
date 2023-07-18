@@ -151,7 +151,6 @@ public class ControladorMatricula {
                         JOptionPane.showMessageDialog(null, "Se registro satisfactoriamente la matricula.\nLa matrícula esta siendo enviada al email del estudiante...");
                         cargarTablaDeMatriculas();
 
-                        
                         vista.getjDlgMatricula().setVisible(false);
                     } else {
                         JOptionPane.showMessageDialog(null, "No se puedo registrar la matricula");
@@ -482,7 +481,7 @@ public class ControladorMatricula {
         vista.getTxtNombreCurso().setText("");
     }
 
-   
+    
 
     public void botonCancelar() {
         vista.getjDlgMatricula().setVisible(false);

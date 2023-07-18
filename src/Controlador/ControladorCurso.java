@@ -1,4 +1,5 @@
 package Controlador;
+
 import Conexion.ConexionPG;
 import Modelo.Curso;
 import Modelo.ModeloCurso;

@@ -1,5 +1,6 @@
 package Conexion;
 
+import Modelo.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -14,7 +15,7 @@ public class ConexionPG {
     Connection con;
 
     //String cadenaConexion = "jdbc:postgresql://containers-us-west-141.railway.app:6363/railway";
-    String cadenaConexion = "jdbc:postgresql://localhost:5432/";
+    String cadenaConexion = "jdbc:postgresql://localhost:5432/M3AcademadeBaile";
     //jdbc:postgresql://localhost:5432/ProyectoAcademiaMusical
     String usuarioPG = "postgres";
     String passPG = "1234";

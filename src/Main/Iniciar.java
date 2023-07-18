@@ -1,10 +1,14 @@
 package Main;
 
+import Controlador.ControladorLogin;
+import Vista.VistaLogin;
+
 public class Iniciar {
 
     public static void main(String[] args) {
         
-        System.out.println("Main.Iniciar.main()");
-
+      VistaLogin vistaLogin = new VistaLogin();
+        ControladorLogin control = new ControladorLogin(vistaLogin);
+        control.iniciarControl();
     }
 }
