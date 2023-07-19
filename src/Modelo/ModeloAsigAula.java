@@ -24,25 +24,25 @@ public class ModeloAsigAula extends AsigAula {
     }
 
     public SQLException asignarAula() {
-        String sql = "INSERT INTO asigaula( asia_codcurso, asia_codaula, asia_fecha ,asia_estado) VALUES (" + getAsia_codcurso() + ", " + getAsia_codaula() + ",'" + getAsia_fecha() + "', 'A');";
+        String sql = "INSERT INTO asiaula( asia_codcurso, asia_codaula, asia_fecha ,asia_estado) VALUES (" + getAsia_codcurso() + ", " + getAsia_codaula() + ",'" + getAsia_fecha() + "', 'A');";
 
         return conpg.accion(sql);
     }
 
     public SQLException modificarAsignacionFecha() {
-        String sql = "UPDATE asigaula SET asia_fecha = '" + getAsia_fecha() + "' where asia_codigo = " + getAsia_codigo() + ";";
+        String sql = "UPDATE asiaula SET asia_fecha = '" + getAsia_fecha() + "' where asia_codigo = " + getAsia_codigo() + ";";
 
         return conpg.accion(sql);
     }
 
     public SQLException modificarAsignacionCompleto() {
-        String sql = "UPDATE asigaula SET asia_codcurso = " + getAsia_codcurso() + ", asia_codaula = " + getAsia_codaula() + ", asia_fecha = '" + getAsia_fecha() + "' where asia_codigo = " + getAsia_codigo() + ";";
+        String sql = "UPDATE asiaula SET asia_codcurso = " + getAsia_codcurso() + ", asia_codaula = " + getAsia_codaula() + ", asia_fecha = '" + getAsia_fecha() + "' where asia_codigo = " + getAsia_codigo() + ";";
 
         return conpg.accion(sql);
     }
 
     public SQLException eliminarAsignacion(int codigoAsignacion) {
-        String sql = "UPDATE asigaula SET asia_estado = 'I' where asia_codigo = " + codigoAsignacion + ";";
+        String sql = "UPDATE asiaula SET asia_estado = 'I' where asia_codigo = " + codigoAsignacion + ";";
 
         return conpg.accion(sql);
     }
@@ -51,7 +51,7 @@ public class ModeloAsigAula extends AsigAula {
         try {
             List<AsigAula> lista = new ArrayList<>();
 
-            String sql = "select * from asigaula where asia_estado = 'A'";
+            String sql = "select * from asiaula where asia_estado = 'A'";
 
             ResultSet rs = conpg.consulta(sql); //La consulta nos devuelve un "ResultSet"
 

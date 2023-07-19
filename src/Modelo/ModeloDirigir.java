@@ -29,7 +29,7 @@ public class ModeloDirigir extends Dirigir {
     }
     
     public SQLException asignarDirigir() {
-        String sql = "INSERT INTO dirigir(dir_codset, dir_codpro, dir_fecharegistro, dir_estado) VALUES (" + getDir_codset() + ", " + getDir_codpro() + ", '" + getDir_fecharegistro() + "', 'A');";
+        String sql = "INSERT INTO dirigir(dir_codset, dir_codpro, dir_fecharegistro, dir_tipo) VALUES (" + getDir_codset() + ", " + getDir_codpro() + ", '" + getDir_fecharegistro() + "', 'A');";
 
         return conpg.accion(sql);
     }
@@ -47,7 +47,7 @@ public class ModeloDirigir extends Dirigir {
     }
 
     public SQLException eliminarDirigir(int codigoDirigir) {
-        String sql = "UPDATE dirigir SET dir_estado = 'I' where dir_codigo = " + codigoDirigir + ";";
+        String sql = "UPDATE dirigir SET dir_tipo = 'I' where dir_codigo = " + codigoDirigir + ";";
 
         return conpg.accion(sql);
     }
@@ -56,7 +56,7 @@ public class ModeloDirigir extends Dirigir {
         try {
             List<Dirigir> lista = new ArrayList<>();
 
-            String sql = "select * from dirigir where dir_estado = 'A'";
+            String sql = "select * from dirigir where dir_tipo = 'A'";
 
             ResultSet rs = conpg.consulta(sql); //La consulta nos devuelve un "ResultSet"
 
