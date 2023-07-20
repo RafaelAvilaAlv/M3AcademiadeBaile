@@ -18,57 +18,57 @@ import java.util.logging.Logger;
  *
  * @author Usuario
  */
-public class ModeloProductor extends Productor {
+public class ModeloDirector_artistico extends Director_artistico {
 
     ConexionPG conpg = new ConexionPG();
 
-    public ModeloProductor() {
+    public ModeloDirector_artistico() {
     }
 
-    public ModeloProductor(int pro_codemp, int pro_codigo, int pro_expe, String pro_estado) {
+    public ModeloDirector_artistico(int pro_codemp, int pro_codigo, int pro_expe, String pro_estado) {
         super(pro_codemp, pro_codigo, pro_expe, pro_estado);
     }
 
-    public ModeloProductor(int pro_codemp, int pro_codigo, int pro_expe, String pro_estado, int emp_codigo, int emp_codper, Date emp_fechacontratacion, Double emp_salario) {
+    public ModeloDirector_artistico(int pro_codemp, int pro_codigo, int pro_expe, String pro_estado, int emp_codigo, int emp_codper, Date emp_fechacontratacion, Double emp_salario) {
         super(pro_codemp, pro_codigo, pro_expe, pro_estado, emp_codigo, emp_codper, emp_fechacontratacion, emp_salario);
     }
 
-    public ModeloProductor(int pro_codemp, int pro_codigo, int pro_expe, String pro_estado, int emp_codigo, int emp_codper, Date emp_fechacontratacion, Double emp_salario, int per_codigo, String per_cedula, String per_primernom, String per_segundonom, String per_apellidopater, String per_apellidomater, java.util.Date per_fechanac, String per_genero, String per_telefono, String per_email, String per_direccion) {
+    public ModeloDirector_artistico(int pro_codemp, int pro_codigo, int pro_expe, String pro_estado, int emp_codigo, int emp_codper, Date emp_fechacontratacion, Double emp_salario, int per_codigo, String per_cedula, String per_primernom, String per_segundonom, String per_apellidopater, String per_apellidomater, java.util.Date per_fechanac, String per_genero, String per_telefono, String per_email, String per_direccion) {
         super(pro_codemp, pro_codigo, pro_expe, pro_estado, emp_codigo, emp_codper, emp_fechacontratacion, emp_salario, per_codigo, per_cedula, per_primernom, per_segundonom, per_apellidopater, per_apellidomater, per_fechanac, per_genero, per_telefono, per_email, per_direccion);
     }
 
     public SQLException crearProductor() {
 
-        String sql = "INSERT INTO productor(pro_codemp, pro_experiencia, pro_estado) VALUES (" + getPro_codemp() + ", " + getPro_expe() + ", 'A');";
+        String sql = "INSERT INTO director_artistico(pro_codemp, pro_experiencia, pro_estado) VALUES (" + getPro_codemp() + ", " + getPro_expe() + ", 'A');";
 
         return conpg.accion(sql);
     }
 
     public SQLException modificarProductor() {
-        String sql = "UPDATE productor SET pro_experiencia= " + getPro_expe() + " where pro_codigo = " + getPro_codigo() + ";";
+        String sql = "UPDATE director_artistico SET pro_experiencia= " + getPro_expe() + " where pro_codigo = " + getPro_codigo() + ";";
 
         return conpg.accion(sql);
     }
 
     public SQLException eliminarProductor(int codigoProductor) {
-        String sql = "UPDATE productor SET pro_estado= 'I' where pro_codigo = " + codigoProductor + ";";
+        String sql = "UPDATE director_artistico SET pro_estado= 'I' where pro_codigo = " + codigoProductor + ";";
 
         return conpg.accion(sql);
     }
 
-    public List<Productor> listaProductorTabla() {
+    public List<Director_artistico> listaProductorTabla() {
         try {
             //Me retorna un "List" de "persona"
-            List<Productor> lista = new ArrayList<>();
+            List<Director_artistico> lista = new ArrayList<>();
 
-            String sql = "select * from persona, empleado, productor where per_codigo = emp_codper and emp_codigo = pro_codemp and pro_estado = 'A'";
+            String sql = "select * from persona, empleado, director_artistico where per_codigo = emp_codper and emp_codigo = pro_codemp and pro_estado = 'A'";
 
             ResultSet rs = conpg.consulta(sql); //La consulta nos devuelve un "ResultSet"
 
             //Pasar de "ResultSet" a "List"
             while (rs.next()) {
                 //Crear las instancias de los docentes
-                Productor productor = new Productor();
+                Director_artistico productor = new Director_artistico();
 
                 //Todo lo que haga en la sentencia define como voy a extraer los datos
                 productor.setPer_codigo(rs.getInt("per_codigo"));
@@ -105,18 +105,18 @@ public class ModeloProductor extends Productor {
         }
     }
 
-    public List<Productor> buscarProductor(String cedula) {
+    public List<Director_artistico> buscarProductor(String cedula) {
         try {
             //Me retorna un "List" de "persona"
-            List<Productor> lista = new ArrayList<>();
+            List<Director_artistico> lista = new ArrayList<>();
 
-            String sql = "select * from persona, empleado, productor where per_codigo = emp_codper and emp_codigo = pro_codemp and pro_estado = 'A' and per_cedula like '" + cedula + "%'";
+            String sql = "select * from persona, empleado, director_artistico where per_codigo = emp_codper and emp_codigo = pro_codemp and pro_estado = 'A' and per_cedula like '" + cedula + "%'";
 
             ResultSet rs = conpg.consulta(sql); //La consulta nos devuelve un "ResultSet"
 
             //Pasar de "ResultSet" a "List"
             while (rs.next()) {
-                Productor productor = new Productor();
+                Director_artistico productor = new Director_artistico();
 
                 //Todo lo que haga en la sentencia define como voy a extraer los datos
                 productor.setPer_codigo(rs.getInt("per_codigo"));
@@ -158,7 +158,7 @@ public class ModeloProductor extends Productor {
         int codigo = 0;
         try {
 
-            String sql = "select pro_codigo from persona,empleado,productor where per_cedula = '" + cedula + "' and per_codigo = emp_codper and emp_codigo = pro_codemp;";
+            String sql = "select pro_codigo from persona,empleado,director_artistico where per_cedula = '" + cedula + "' and per_codigo = emp_codper and emp_codigo = pro_codemp;";
 
             ResultSet rs = conpg.consulta(sql); //La consulta nos devuelve un "ResultSet"
 

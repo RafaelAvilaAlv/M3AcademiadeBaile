@@ -4,7 +4,7 @@ import Modelo.*;
 import Vista.*;
 import java.awt.Dimension;
 import java.awt.Image;
-
+import Modelo.ModeloReserva;
 import java.awt.Toolkit;
 import java.util.List;
 
@@ -87,12 +87,12 @@ public class ControladorPrincipal {
 
         vistaPrincipal.getEscritorioPrincipal().removeAll(); //Remuevo todos los elementos que esten en sobre el desktopPane
 
-        VistaProductor vista = new VistaProductor();
-        ModeloProductor modelo = new ModeloProductor();
+        VistaDirector_artistico vista = new VistaDirector_artistico();
+        ModeloDirector_artistico modelo = new ModeloDirector_artistico();
 
         vistaPrincipal.getEscritorioPrincipal().add(vista);
 
-        ControladorProductor control = new ControladorProductor(modelo, vista);
+        ControladorDirector_artistico control = new ControladorDirector_artistico(modelo, vista);
         control.iniciarControl();
     }
 
@@ -140,14 +140,14 @@ public class ControladorPrincipal {
         ModeloEstudiante estudiante = new ModeloEstudiante(); //Crear un objeto de Estudiante
         List<Estudiante> estudiantes = estudiante.listaEstudiantesTabla();
 
-        ModeloProductor productor = new ModeloProductor(); //Crear un objeto de Estudiante
-        List<Productor> productores = productor.listaProductorTabla();
+        ModeloDirector_artistico productor = new ModeloDirector_artistico(); //Crear un objeto de Estudiante
+        List<Director_artistico> productores = productor.listaProductorTabla();
 
         ModeloReserva reserva = new ModeloReserva(); //Crear un objeto de Reserva
         List<Reserva> reservas = reserva.listaReservasTabla();
 
-        ModeloInstrumento instrumento = new ModeloInstrumento();
-        List<Instrumentos> instrumentos = instrumento.listaInstumentoTabla();
+        ModeloIndumentaria instrumento = new ModeloIndumentaria();
+        List<Indumentaria> instrumentos = instrumento.listaInstumentoTabla();
         //Setear en los labels del dashBoard la cantidad total de cada elemento que conforma la academia
         vista.getLblDocentes().setText(String.valueOf(docentes.stream().count())); //Seteo la cantidad de docentes     
         vista.getLblEstudiantes().setText(String.valueOf(estudiantes.stream().count()));//Seteo la cantidad de estudiantes
@@ -202,12 +202,12 @@ public class ControladorPrincipal {
 
         vistaPrincipal.getEscritorioPrincipal().removeAll(); //Remuevo todos los elementos que esten en sobre el desktopPane
 
-        VistaInstrumento vista = new VistaInstrumento();
-        ModeloInstrumento modelo = new ModeloInstrumento();
+        VistaIndumentaria vista = new VistaIndumentaria();
+        ModeloIndumentaria modelo = new ModeloIndumentaria();
 
         vistaPrincipal.getEscritorioPrincipal().add(vista);
 
-        ControladorInstrumento control = new ControladorInstrumento(modelo, vista);
+        ControladorIndumentaria control = new ControladorIndumentaria(modelo, vista);
         control.iniciarControl();
     }
 
@@ -215,12 +215,12 @@ public class ControladorPrincipal {
 
         vistaPrincipal.getEscritorioPrincipal().removeAll(); //Remuevo todos los elementos que esten en sobre el desktopPane
 
-        VistaSetGrab vista = new VistaSetGrab();
-        ModeloSetGrab modelo = new ModeloSetGrab();
+        VistaEvento vista = new VistaEvento();
+        ModeloEvento modelo = new ModeloEvento();
 
         vistaPrincipal.getEscritorioPrincipal().add(vista);
 
-        ControladorSetGrabacion control = new ControladorSetGrabacion(modelo, vista);
+        ControladorEvento control = new ControladorEvento(modelo, vista);
         control.iniciarControl();
     }
 
@@ -301,7 +301,8 @@ public class ControladorPrincipal {
         ControladorAsigAula control = new ControladorAsigAula(modelo, vista);
         control.iniciarControl();
     }
-    public Image getIconImage(){
+
+    public Image getIconImage() {
         Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("imagenes/loguito.png"));
         return retValue;
     }

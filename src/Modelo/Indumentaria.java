@@ -9,15 +9,15 @@ package Modelo;
  *
  * @author Usuario
  */
-public class Instrumentos {
+public class Indumentaria {
     private String ins_nombre,ins_marca,ins_tipo,ins_estado;
     private int ins_codigo,ins_setcodigo;
     private double ins_valor;
 
-    public Instrumentos() {
+    public Indumentaria() {
     }
 
-    public Instrumentos(String ins_nombre, String ins_marca, String ins_tipo, String ins_estado, int ins_codigo, int ins_setcodigo, double ins_valor) {
+    public Indumentaria(String ins_nombre, String ins_marca, String ins_tipo, String ins_estado, int ins_codigo, int ins_setcodigo, double ins_valor) {
         this.ins_nombre = ins_nombre;
         this.ins_marca = ins_marca;
         this.ins_tipo = ins_tipo;

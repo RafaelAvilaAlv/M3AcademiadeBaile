@@ -7,10 +7,10 @@ package Controlador;
 
 import Modelo.Dirigir;
 import Modelo.ModeloDirigir;
-import Modelo.ModeloProductor;
-import Modelo.ModeloSetGrab;
-import Modelo.Productor;
-import Modelo.SetGrabacion;
+import Modelo.ModeloDirector_artistico;
+import Modelo.ModeloEvento;
+import Modelo.Director_artistico;
+import Modelo.Evento;
 import Vista.VistaDirigir;
 import Vista.VistaPrincipal;
 import java.awt.event.KeyEvent;
@@ -72,12 +72,12 @@ public class ControladorDirigir {
         DefaultTableModel tabla = (DefaultTableModel) vista.getTblDirigir().getModel();
         tabla.setNumRows(0);
 
-        ModeloProductor modeloProductor = new ModeloProductor();
-        ModeloSetGrab modeloSetGrab = new ModeloSetGrab();
+        ModeloDirector_artistico modeloProductor = new ModeloDirector_artistico();
+        ModeloEvento modeloSetGrab = new ModeloEvento();
 
         List<Dirigir> dirigi = modelo.listaDirigirTabla();
-        List<Productor> productores = modeloProductor.listaProductorTabla();
-        List<SetGrabacion> grabaciones = modeloSetGrab.listaSetGrabTabla();
+        List<Director_artistico> productores = modeloProductor.listaProductorTabla();
+        List<Evento> grabaciones = modeloSetGrab.listaSetGrabTabla();
 
         dirigi.stream().forEach(dr -> {
             System.out.println("Codigo prodir : " + dr.getDir_codpro());
@@ -237,12 +237,12 @@ public class ControladorDirigir {
 
             bloquearCampos();
                     
-            ModeloProductor modeloProductor = new ModeloProductor();
-            ModeloSetGrab modeloset = new ModeloSetGrab();
+            ModeloDirector_artistico modeloProductor = new ModeloDirector_artistico();
+            ModeloEvento modeloset = new ModeloEvento();
 
             List<Dirigir> dirig = modelo.listaDirigirTabla();
-            List<Productor> productores = modeloProductor.listaProductorTabla();
-            List<SetGrabacion> setgrab = modeloset.listaSetGrabTabla();
+            List<Director_artistico> productores = modeloProductor.listaProductorTabla();
+            List<Evento> setgrab = modeloset.listaSetGrabTabla();
 
             dirig.stream().forEach(dr -> {
 
@@ -340,13 +340,13 @@ public class ControladorDirigir {
     //Todo sobre los registros de docentes
     public void cargarRegistroDeProductores() {
 
-        ModeloProductor modeloProductor = new ModeloProductor();
+        ModeloDirector_artistico modeloProductor = new ModeloDirector_artistico();
 
         vista.getTblDlgProductor().setRowHeight(25);
         DefaultTableModel estructuraTabla = (DefaultTableModel) vista.getTblDlgProductor().getModel();
         estructuraTabla.setRowCount(0);
 
-        List<Productor> listap = modeloProductor.listaProductorTabla();
+        List<Director_artistico> listap = modeloProductor.listaProductorTabla();
 
         Holder<Integer> i = new Holder<>(0);
 
@@ -371,8 +371,8 @@ public class ControladorDirigir {
             JOptionPane.showMessageDialog(null, "Aun no ha seleccionado una fila");
         } else {
 
-            ModeloProductor modeloProductor = new ModeloProductor();
-            List<Productor> listap = modeloProductor.listaProductorTabla();
+            ModeloDirector_artistico modeloProductor = new ModeloDirector_artistico();
+            List<Director_artistico> listap = modeloProductor.listaProductorTabla();
 
             listap.stream().forEach(c -> {
 
@@ -407,12 +407,12 @@ public class ControladorDirigir {
             @Override
             public void keyReleased(KeyEvent e) {
 
-                ModeloProductor modeloProductor = new ModeloProductor();
+                ModeloDirector_artistico modeloProductor = new ModeloDirector_artistico();
                 vista.getTblDlgProductor().setRowHeight(25);
                 DefaultTableModel estructuraTabla = (DefaultTableModel) vista.getTblDlgProductor().getModel();
                 estructuraTabla.setRowCount(0);
 
-                List<Productor> listap = modeloProductor.buscarProductor(vista.getTxtBuscarProductor().getText());
+                List<Director_artistico> listap = modeloProductor.buscarProductor(vista.getTxtBuscarProductor().getText());
 
                 Holder<Integer> i = new Holder<>(0);
 
@@ -446,13 +446,13 @@ public class ControladorDirigir {
 
     public void cargarRegistroDeSetGrabacion() {
 
-        ModeloSetGrab modeloset = new ModeloSetGrab();
+        ModeloEvento modeloset = new ModeloEvento();
 
         vista.getTblDlgjSetGrabacion().setRowHeight(25);
         DefaultTableModel estructuraTabla = (DefaultTableModel) vista.getTblDlgjSetGrabacion().getModel();
         estructuraTabla.setRowCount(0);
 
-        List<SetGrabacion> listap = modeloset.listaSetGrabTabla();
+        List<Evento> listap = modeloset.listaSetGrabTabla();
 
         Holder<Integer> i = new Holder<>(0);
 
@@ -474,8 +474,8 @@ public class ControladorDirigir {
             JOptionPane.showMessageDialog(null, "Aun no ha seleccionado una fila");
         } else {
 
-            ModeloSetGrab modeloset = new ModeloSetGrab();
-            List<SetGrabacion> listap = modeloset.listaSetGrabTabla();
+            ModeloEvento modeloset = new ModeloEvento();
+            List<Evento> listap = modeloset.listaSetGrabTabla();
 
             listap.stream().forEach(c -> {
 
@@ -507,12 +507,12 @@ public class ControladorDirigir {
             @Override
             public void keyReleased(KeyEvent e) {
 
-                ModeloSetGrab modeloset = new ModeloSetGrab();
+                ModeloEvento modeloset = new ModeloEvento();
                 vista.getTblDlgjSetGrabacion().setRowHeight(25);
                 DefaultTableModel estructuraTabla = (DefaultTableModel) vista.getTblDlgjSetGrabacion().getModel();
                 estructuraTabla.setRowCount(0);
 
-                List<SetGrabacion> listap = modeloset.buscarSetGrabacion(vista.getTxtBuscarSetGrabacion().getText());
+                List<Evento> listap = modeloset.buscarSetGrabacion(vista.getTxtBuscarSetGrabacion().getText());
 
                 Holder<Integer> i = new Holder<>(0);
 

@@ -9,9 +9,9 @@ import Modelo.ModeloDocente;
 import Modelo.ModeloEmpleado;
 import Modelo.ModeloEstudiante;
 import Modelo.ModeloPersona;
-import Modelo.ModeloProductor;
+import Modelo.ModeloDirector_artistico;
 import Modelo.Persona;
-import Modelo.Productor;
+import Modelo.Director_artistico;
 import Vista.VistaPersona;
 import Vista.VistaPrincipal;
 import java.awt.event.KeyEvent;
@@ -270,10 +270,10 @@ public class ControladorPersona {
 
                 ModeloPersona persona = new ModeloPersona();
                 ModeloEmpleado empleado = new ModeloEmpleado();
-                ModeloProductor productor = new ModeloProductor();
+                ModeloDirector_artistico productor = new ModeloDirector_artistico();
 
                 List<Empleado> empleados = empleado.listaEmpleadoTabla();
-                List<Productor> productores = productor.listaProductorTabla();
+                List<Director_artistico> productores = productor.listaProductorTabla();
 
                 empleados.stream().forEach(e -> {
                     if (persona.traerCodigoDePersonaCrear(vista.getTxtCedula().getText()) == e.getEmp_codper()) {

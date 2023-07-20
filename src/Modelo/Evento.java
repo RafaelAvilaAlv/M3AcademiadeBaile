@@ -6,14 +6,14 @@
 package Modelo;
 
  
-public class SetGrabacion {
+public class Evento {
     private int set_codigo;
     private String set_tamanio,set_nombre,set_ubicacion,set_estado;
 
-    public SetGrabacion() {
+    public Evento() {
     }
 
-    public SetGrabacion(int set_codigo, String set_tamanio, String set_nombre, String set_ubicacion, String set_estado) {
+    public Evento(int set_codigo, String set_tamanio, String set_nombre, String set_ubicacion, String set_estado) {
         this.set_codigo = set_codigo;
         this.set_tamanio = set_tamanio;
         this.set_nombre = set_nombre;

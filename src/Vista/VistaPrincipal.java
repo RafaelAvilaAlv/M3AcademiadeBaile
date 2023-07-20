@@ -235,7 +235,7 @@ public JButton getBtnAdministrador() {
         btnDashboard.setText("Dashboard");
         btnDashboard.setAutoscrolls(true);
         btnDashboard.setBorder(null);
-        btnDashboard.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnDashboard.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnDashboard.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
 
         btnCurso.setBackground(new java.awt.Color(46, 49, 49));
@@ -245,7 +245,7 @@ public JButton getBtnAdministrador() {
         btnCurso.setText("Curso");
         btnCurso.setAutoscrolls(true);
         btnCurso.setBorder(null);
-        btnCurso.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnCurso.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnCurso.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
 
         btnAsignatura.setBackground(new java.awt.Color(46, 49, 49));
@@ -255,7 +255,7 @@ public JButton getBtnAdministrador() {
         btnAsignatura.setText("Asignatura");
         btnAsignatura.setAutoscrolls(true);
         btnAsignatura.setBorder(null);
-        btnAsignatura.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnAsignatura.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnAsignatura.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
 
         btnAsignarAsignatura.setBackground(new java.awt.Color(46, 49, 49));
@@ -265,7 +265,7 @@ public JButton getBtnAdministrador() {
         btnAsignarAsignatura.setText("Asignar Asignatura");
         btnAsignarAsignatura.setAutoscrolls(true);
         btnAsignarAsignatura.setBorder(null);
-        btnAsignarAsignatura.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnAsignarAsignatura.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnAsignarAsignatura.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
 
         btnAula.setBackground(new java.awt.Color(46, 49, 49));
@@ -275,27 +275,27 @@ public JButton getBtnAdministrador() {
         btnAula.setText("Aula");
         btnAula.setAutoscrolls(true);
         btnAula.setBorder(null);
-        btnAula.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnAula.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnAula.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
 
         btnInstrumento.setBackground(new java.awt.Color(46, 49, 49));
         btnInstrumento.setFont(new java.awt.Font("Roboto Medium", 0, 16)); // NOI18N
         btnInstrumento.setForeground(new java.awt.Color(255, 255, 255));
         btnInstrumento.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/guitarra.png"))); // NOI18N
-        btnInstrumento.setText("Instrumento");
+        btnInstrumento.setText("Indumentaria");
         btnInstrumento.setAutoscrolls(true);
         btnInstrumento.setBorder(null);
-        btnInstrumento.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnInstrumento.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnInstrumento.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
 
         btnSetGrab.setBackground(new java.awt.Color(46, 49, 49));
         btnSetGrab.setFont(new java.awt.Font("Roboto Medium", 0, 16)); // NOI18N
         btnSetGrab.setForeground(new java.awt.Color(255, 255, 255));
         btnSetGrab.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/grabar.png"))); // NOI18N
-        btnSetGrab.setText("Set de Grabacion");
+        btnSetGrab.setText("Evento");
         btnSetGrab.setAutoscrolls(true);
         btnSetGrab.setBorder(null);
-        btnSetGrab.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnSetGrab.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnSetGrab.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
 
         btnReserva.setBackground(new java.awt.Color(46, 49, 49));
@@ -305,7 +305,7 @@ public JButton getBtnAdministrador() {
         btnReserva.setText("Reserva");
         btnReserva.setAutoscrolls(true);
         btnReserva.setBorder(null);
-        btnReserva.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnReserva.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnReserva.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
 
         btnHorario.setBackground(new java.awt.Color(46, 49, 49));
@@ -315,7 +315,7 @@ public JButton getBtnAdministrador() {
         btnHorario.setText("Horario");
         btnHorario.setAutoscrolls(true);
         btnHorario.setBorder(null);
-        btnHorario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnHorario.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnHorario.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
 
         btnAsiHorario.setBackground(new java.awt.Color(46, 49, 49));
@@ -325,7 +325,7 @@ public JButton getBtnAdministrador() {
         btnAsiHorario.setText("Asignar Horario");
         btnAsiHorario.setAutoscrolls(true);
         btnAsiHorario.setBorder(null);
-        btnAsiHorario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnAsiHorario.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         btnAsignarAula.setBackground(new java.awt.Color(46, 49, 49));
         btnAsignarAula.setFont(new java.awt.Font("Roboto Medium", 0, 16)); // NOI18N
@@ -334,7 +334,7 @@ public JButton getBtnAdministrador() {
         btnAsignarAula.setText("Asignar aula");
         btnAsignarAula.setAutoscrolls(true);
         btnAsignarAula.setBorder(null);
-        btnAsignarAula.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnAsignarAula.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnAsignarAula.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
 
         btnDirigir.setBackground(new java.awt.Color(46, 49, 49));
@@ -344,7 +344,7 @@ public JButton getBtnAdministrador() {
         btnDirigir.setText("Asignar director");
         btnDirigir.setAutoscrolls(true);
         btnDirigir.setBorder(null);
-        btnDirigir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnDirigir.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnDirigir.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -431,7 +431,7 @@ public JButton getBtnAdministrador() {
         btnRegistrarPersona.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/personas.png"))); // NOI18N
         btnRegistrarPersona.setToolTipText("Registrar persona");
         btnRegistrarPersona.setBorder(null);
-        btnRegistrarPersona.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnRegistrarPersona.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         btnEstudiante.setBackground(new java.awt.Color(255, 255, 255));
         btnEstudiante.setFont(new java.awt.Font("Roboto Medium", 0, 16)); // NOI18N
@@ -440,16 +440,16 @@ public JButton getBtnAdministrador() {
         btnEstudiante.setText("Estudiante");
         btnEstudiante.setToolTipText("Registrar estudiante");
         btnEstudiante.setBorder(null);
-        btnEstudiante.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnEstudiante.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         btnProductor.setBackground(new java.awt.Color(255, 255, 255));
         btnProductor.setFont(new java.awt.Font("Roboto Medium", 0, 16)); // NOI18N
         btnProductor.setForeground(new java.awt.Color(153, 0, 0));
         btnProductor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/productorn.png"))); // NOI18N
-        btnProductor.setText("Productor");
-        btnProductor.setToolTipText("Registrar productor");
+        btnProductor.setText("Director Artistico");
+        btnProductor.setToolTipText("Registrar Director_artistico");
         btnProductor.setBorder(null);
-        btnProductor.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnProductor.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         btnDocente.setBackground(new java.awt.Color(255, 255, 255));
         btnDocente.setFont(new java.awt.Font("Roboto Medium", 0, 16)); // NOI18N
@@ -458,7 +458,7 @@ public JButton getBtnAdministrador() {
         btnDocente.setText("Docente");
         btnDocente.setToolTipText("Registrar docente");
         btnDocente.setBorder(null);
-        btnDocente.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnDocente.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         btnAdministrador.setBackground(new java.awt.Color(255, 255, 255));
         btnAdministrador.setFont(new java.awt.Font("Roboto Medium", 0, 16)); // NOI18N
@@ -467,7 +467,7 @@ public JButton getBtnAdministrador() {
         btnAdministrador.setText("Administrador");
         btnAdministrador.setToolTipText("Registrar administrador");
         btnAdministrador.setBorder(null);
-        btnAdministrador.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnAdministrador.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         btnMatricula.setBackground(new java.awt.Color(255, 255, 255));
         btnMatricula.setFont(new java.awt.Font("Roboto Medium", 0, 16)); // NOI18N
@@ -476,7 +476,7 @@ public JButton getBtnAdministrador() {
         btnMatricula.setText("Matrícula");
         btnMatricula.setToolTipText("Realizar matrícula");
         btnMatricula.setBorder(null);
-        btnMatricula.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnMatricula.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -484,17 +484,17 @@ public JButton getBtnAdministrador() {
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addGap(421, 421, 421)
-                .addComponent(btnProductor, javax.swing.GroupLayout.DEFAULT_SIZE, 117, Short.MAX_VALUE)
+                .addComponent(btnProductor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(26, 26, 26)
-                .addComponent(btnDocente, javax.swing.GroupLayout.DEFAULT_SIZE, 105, Short.MAX_VALUE)
+                .addComponent(btnDocente, javax.swing.GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
-                .addComponent(btnEstudiante, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE)
+                .addComponent(btnEstudiante, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
                 .addGap(30, 30, 30)
-                .addComponent(btnAdministrador, javax.swing.GroupLayout.DEFAULT_SIZE, 149, Short.MAX_VALUE)
+                .addComponent(btnAdministrador, javax.swing.GroupLayout.DEFAULT_SIZE, 142, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnMatricula, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
+                .addComponent(btnMatricula, javax.swing.GroupLayout.DEFAULT_SIZE, 122, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnRegistrarPersona, javax.swing.GroupLayout.DEFAULT_SIZE, 46, Short.MAX_VALUE)
+                .addComponent(btnRegistrarPersona, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
                 .addGap(48, 48, 48))
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addGap(10, 10, 10)

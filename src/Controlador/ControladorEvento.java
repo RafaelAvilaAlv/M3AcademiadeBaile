@@ -1,10 +1,10 @@
 package Controlador;
 
 import Conexion.ConexionPG;
-import Modelo.ModeloSetGrab;
-import Modelo.SetGrabacion;
+import Modelo.ModeloEvento;
+import Modelo.Evento;
 import Vista.VistaPrincipal;
-import Vista.VistaSetGrab;
+import Vista.VistaEvento;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.util.HashMap;
@@ -21,14 +21,14 @@ import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.engine.util.JRLoader;
 import net.sf.jasperreports.view.JasperViewer;
 
-public class ControladorSetGrabacion {
+public class ControladorEvento {
 
-    ModeloSetGrab modelo;
-    VistaSetGrab vista;
+    ModeloEvento modelo;
+    VistaEvento vista;
 
     VistaPrincipal p = new VistaPrincipal();
 
-    public ControladorSetGrabacion(ModeloSetGrab modelo, VistaSetGrab vista) {
+    public ControladorEvento(ModeloEvento modelo, VistaEvento vista) {
         this.modelo = modelo;
         this.vista = vista;
         vista.setVisible(true);
@@ -84,7 +84,7 @@ public class ControladorSetGrabacion {
         DefaultTableModel tabla = (DefaultTableModel) vista.getTblSetGrab().getModel();
         tabla.setNumRows(0);
 
-        List<SetGrabacion> instrumento = modelo.listaSetGrabTabla();
+        List<Evento> instrumento = modelo.listaSetGrabTabla();
         instrumento.stream().forEach(p -> {
             String[] datos = {String.valueOf(p.getSet_codigo()), p.getSet_nombre(), p.getSet_ubicacion(), p.getSet_tamanio()};
             tabla.addRow(datos);
@@ -95,7 +95,7 @@ public class ControladorSetGrabacion {
         if ("Crear nuevo Set de grabacion".equals(vista.getjDlgSetGrab().getName())) {
             //INSERTAR
             if (validarDatos()) {
-                ModeloSetGrab set = new ModeloSetGrab();
+                ModeloEvento set = new ModeloEvento();
                 set.setSet_codigo(codigoSetGrab);
                 set.setSet_nombre(vista.getTxtNombre().getText());
                 set.setSet_tamanio(vista.getComboTamanio().getSelectedItem().toString());
@@ -114,7 +114,7 @@ public class ControladorSetGrabacion {
 
             //EDITAR
             if (validarDatos()) {
-                ModeloSetGrab set = new ModeloSetGrab();
+                ModeloEvento set = new ModeloEvento();
 
                 set.setSet_codigo(codigoSetGrab);
                 set.setSet_nombre(vista.getTxtNombre().getText());
@@ -174,7 +174,7 @@ public class ControladorSetGrabacion {
             vista.getjDlgSetGrab().setTitle("Modificar set de grabacion");
             vista.getjDlgSetGrab().setVisible(true);
 
-            List<SetGrabacion> listap = modelo.listaSetGrabTabla();
+            List<Evento> listap = modelo.listaSetGrabTabla();
 
             listap.stream().forEach(setg -> {
 
@@ -215,7 +215,7 @@ public class ControladorSetGrabacion {
                 DefaultTableModel tabla = (DefaultTableModel) vista.getTblSetGrab().getModel();
                 tabla.setNumRows(0);
 
-                List<SetGrabacion> instrumento = modelo.buscarSetGrabacion(vista.getTxtBuscar().getText());
+                List<Evento> instrumento = modelo.buscarSetGrabacion(vista.getTxtBuscar().getText());
                 instrumento.stream().forEach(p -> {
                     String[] datos = {String.valueOf(p.getSet_codigo()), p.getSet_nombre(), p.getSet_ubicacion(), p.getSet_tamanio()};
                     tabla.addRow(datos);

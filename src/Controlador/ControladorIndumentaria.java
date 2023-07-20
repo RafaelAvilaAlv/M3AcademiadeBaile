@@ -1,11 +1,11 @@
 package Controlador;
 
 import Conexion.ConexionPG;
-import Modelo.ModeloSetGrab;
-import Modelo.Instrumentos;
-import Modelo.ModeloInstrumento;
-import Modelo.SetGrabacion;
-import Vista.VistaInstrumento;
+import Modelo.ModeloEvento;
+import Modelo.Indumentaria;
+import Modelo.ModeloIndumentaria;
+import Modelo.Evento;
+import Vista.VistaIndumentaria;
 import Vista.VistaPrincipal;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
@@ -24,14 +24,14 @@ import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.engine.util.JRLoader;
 import net.sf.jasperreports.view.JasperViewer;
 
-public class ControladorInstrumento {
+public class ControladorIndumentaria {
 
-    ModeloInstrumento modelo;
-    VistaInstrumento vista;
+    ModeloIndumentaria modelo;
+    VistaIndumentaria vista;
 
     VistaPrincipal p = new VistaPrincipal();
 
-    public ControladorInstrumento(ModeloInstrumento modelo, VistaInstrumento vista) {
+    public ControladorIndumentaria(ModeloIndumentaria modelo, VistaIndumentaria vista) {
         this.modelo = modelo;
         this.vista = vista;
         vista.setVisible(true);
@@ -80,8 +80,8 @@ public class ControladorInstrumento {
         vista.getjDlgInstrumento().setVisible(true);
         vista.getjDlgInstrumento().setSize(813, 488);
         vista.getjDlgInstrumento().setLocationRelativeTo(vista);
-        vista.getjDlgInstrumento().setName("Crear nuevo instrumento");
-        vista.getjDlgInstrumento().setTitle("Crear nuevo instrumento");
+        vista.getjDlgInstrumento().setName("Crear nueva Indumentaria");
+        vista.getjDlgInstrumento().setTitle("Crear nueva Indumentaria");
 
         vista.getTxtnombreset().setEnabled(false);
         vista.getTxtUbicacionSet().setEnabled(false);
@@ -96,7 +96,7 @@ public class ControladorInstrumento {
         DefaultTableModel tabla = (DefaultTableModel) vista.getTblInstrumento().getModel();
         tabla.setNumRows(0);
 
-        List<Instrumentos> instrumento = modelo.listaInstumentoTabla();
+        List<Indumentaria> instrumento = modelo.listaInstumentoTabla();
         instrumento.stream().forEach(p -> {
             String[] datos = {String.valueOf(p.getIns_codigo()), p.getIns_nombre(), p.getIns_marca(), p.getIns_tipo(), String.valueOf(p.getIns_valor())};
             tabla.addRow(datos);
@@ -104,11 +104,11 @@ public class ControladorInstrumento {
     }
 
     private void crearEditarInstrumento() {
-        if ("Crear nuevo instrumento".equals(vista.getjDlgInstrumento().getName())) {
+        if ("Crear nueva Indumentaria".equals(vista.getjDlgInstrumento().getName())) {
 
             //INSERTAR
             if (validarDatos()) {
-                ModeloInstrumento ins = new ModeloInstrumento();
+                ModeloIndumentaria ins = new ModeloIndumentaria();
                 ins.setIns_nombre(vista.getTxtnombre().getText());
                 ins.setIns_setcodigo(Integer.parseInt(vista.getTxtCodigoSet().getText()));
                 ins.setIns_marca(vista.getTxtMarca().getText());
@@ -117,16 +117,16 @@ public class ControladorInstrumento {
 
                 if (ins.crearInstrumento() == null) {
                     vista.getjDlgInstrumento().setVisible(false);
-                    JOptionPane.showMessageDialog(vista, "Instrumento creado satisfactoriamente");
+                    JOptionPane.showMessageDialog(vista, "Indumentaria creada satisfactoriamente");
                 } else {
-                    JOptionPane.showMessageDialog(vista, "No se pudo crear el instrumento");
+                    JOptionPane.showMessageDialog(vista, "No se pudo crear la Indumentaria");
                 }
             }
 
         } else {
             //EDITAR
             if (validarDatos()) {
-                ModeloInstrumento inst = new ModeloInstrumento();
+                ModeloIndumentaria inst = new ModeloIndumentaria();
 
                 inst.setIns_codigo(codigoInstrumento);
                 inst.setIns_setcodigo(Integer.parseInt(vista.getTxtCodigoSet().getText()));
@@ -141,7 +141,7 @@ public class ControladorInstrumento {
                     JOptionPane.showMessageDialog(vista, "Instrumento modificado satisfactoriamente");
 
                 } else {
-                    JOptionPane.showMessageDialog(vista, "No se pudo modificar el instrumento");
+                    JOptionPane.showMessageDialog(vista, "No se pudo modificar la Indumentaria");
                 }
             }
         }
@@ -164,10 +164,10 @@ public class ControladorInstrumento {
                 codigo = Integer.parseInt(vista.getTblInstrumento().getValueAt(fila, 0).toString());
 
                 if (modelo.eliminarInstrumento(codigo) == null) {
-                    JOptionPane.showMessageDialog(null, "El instrumento fue eliminado exitosamente");
+                    JOptionPane.showMessageDialog(null, "La Indumentaria fue eliminado exitosamente");
                     cargarTablaDeInstrumento();//Actualizo la tabla con los datos
                 } else {
-                    JOptionPane.showMessageDialog(null, "El instrumento no pudo ser eliminado");
+                    JOptionPane.showMessageDialog(null, "La Indumentaria no pudo ser eliminado");
                 }
             }
         }
@@ -183,16 +183,16 @@ public class ControladorInstrumento {
         } else {
 
             vista.getTxtCodigoSet().setVisible(false);
-            ModeloSetGrab modeloSet = new ModeloSetGrab();
+            ModeloEvento modeloSet = new ModeloEvento();
 
             vista.getjDlgInstrumento().setVisible(true);
             vista.getjDlgInstrumento().setSize(813, 488);
             vista.getjDlgInstrumento().setLocationRelativeTo(null);
-            vista.getjDlgInstrumento().setName("Modificar instrumento");
-            vista.getjDlgInstrumento().setTitle("Modificar instrumento");
+            vista.getjDlgInstrumento().setName("Modificar Indumentaria");
+            vista.getjDlgInstrumento().setTitle("Modificar Indumentaria");
 
-            List<Instrumentos> listai = modelo.listaInstumentoTabla();
-            List<SetGrabacion> listas = modeloSet.listaSetGrabTabla();
+            List<Indumentaria> listai = modelo.listaInstumentoTabla();
+            List<Evento> listas = modeloSet.listaSetGrabTabla();
 
             listai.stream().forEach(instrumento -> {
 
@@ -237,7 +237,7 @@ public class ControladorInstrumento {
                 DefaultTableModel tabla = (DefaultTableModel) vista.getTblInstrumento().getModel();
                 tabla.setNumRows(0);
 
-                List<Instrumentos> instrumento = modelo.buscarInstrumento(vista.getTxtBuscar().getText());
+                List<Indumentaria> instrumento = modelo.buscarInstrumento(vista.getTxtBuscar().getText());
                 instrumento.stream().forEach(p -> {
                     String[] datos = {String.valueOf(p.getIns_codigo()), p.getIns_nombre(), p.getIns_marca(), p.getIns_tipo(), String.valueOf(p.getIns_valor())};
                     tabla.addRow(datos);
@@ -253,7 +253,7 @@ public class ControladorInstrumento {
         vista.getjDlgCargarSet().setVisible(true);
         vista.getjDlgCargarSet().setSize(701, 436);
         vista.getjDlgCargarSet().setLocationRelativeTo(vista);
-        vista.getjDlgCargarSet().setTitle("Seleccionar set de grabacion");
+        vista.getjDlgCargarSet().setTitle("Seleccionar un evento");
 
         cargarDatosDeSetGrab();
         buscarSetDeGrabacion();
@@ -262,12 +262,12 @@ public class ControladorInstrumento {
 
     public void cargarDatosDeSetGrab() {
 
-        ModeloSetGrab modeloCliente = new ModeloSetGrab();
+        ModeloEvento modeloCliente = new ModeloEvento();
         vista.getTblSet().setRowHeight(25);
         DefaultTableModel estructuraTabla = (DefaultTableModel) vista.getTblSet().getModel();
         estructuraTabla.setRowCount(0);
 
-        List<SetGrabacion> listap = modeloCliente.listaSetGrabTabla();
+        List<Evento> listap = modeloCliente.listaSetGrabTabla();
 
         Holder<Integer> i = new Holder<>(0);
 
@@ -291,8 +291,8 @@ public class ControladorInstrumento {
             JOptionPane.showMessageDialog(null, "Aun no ha seleccionado una fila");
         } else {
 
-            ModeloSetGrab modeloSet = new ModeloSetGrab();
-            List<SetGrabacion> sets = modeloSet.listaSetGrabTabla();
+            ModeloEvento modeloSet = new ModeloEvento();
+            List<Evento> sets = modeloSet.listaSetGrabTabla();
             sets.stream().forEach(s -> {
 
                 if (s.getSet_codigo() == Integer.parseInt(vista.getTblSet().getValueAt(fila, 0).toString())) {
@@ -324,12 +324,12 @@ public class ControladorInstrumento {
             @Override
             public void keyReleased(KeyEvent e) {
 
-                ModeloSetGrab modeloSet = new ModeloSetGrab();
+                ModeloEvento modeloSet = new ModeloEvento();
 
                 DefaultTableModel tabla = (DefaultTableModel) vista.getTblSet().getModel();
                 tabla.setNumRows(0);
 
-                List<SetGrabacion> set = modeloSet.buscarSetGrabacion(vista.getTxtBuscarSet().getText());
+                List<Evento> set = modeloSet.buscarSetGrabacion(vista.getTxtBuscarSet().getText());
                 set.stream().forEach(p -> {
                     String[] datos = {String.valueOf(p.getSet_codigo()), p.getSet_nombre(), p.getSet_ubicacion(), p.getSet_tamanio()};
                     tabla.addRow(datos);
@@ -366,17 +366,17 @@ public class ControladorInstrumento {
         }
 
         if (vista.getTxtTipo().getText().isEmpty()) {
-            JOptionPane.showMessageDialog(null, "Ingrese el tipo de instrumento");
+            JOptionPane.showMessageDialog(null, "Ingrese el tipo de Indumentaria");
             validar = false;
         } else {
             if (!mivalidacion.validarTextoConEspacio(vista.getTxtTipo().getText())) {
-                JOptionPane.showMessageDialog(null, "Tipo de instrumento incorrecto");
+                JOptionPane.showMessageDialog(null, "Tipo de Indumentaria incorrecto");
                 validar = false;
             }
         }
 
         if (vista.getTxtnombreset().getText().isEmpty()) {
-            JOptionPane.showMessageDialog(null, "Seleccione un set de grabación");
+            JOptionPane.showMessageDialog(null, "Seleccione un Evento");
             validar = false;
         }
 

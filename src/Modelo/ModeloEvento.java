@@ -10,47 +10,47 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 
-public class ModeloSetGrab extends SetGrabacion {
+public class ModeloEvento extends Evento {
 
     ConexionPG conpg = new ConexionPG();
 
-    public ModeloSetGrab() {
+    public ModeloEvento() {
     }
 
-    public ModeloSetGrab(int set_codigo, String set_tamanio, String set_nombre, String set_ubicacion, String set_estado) {
+    public ModeloEvento(int set_codigo, String set_tamanio, String set_nombre, String set_ubicacion, String set_estado) {
         super(set_codigo, set_tamanio, set_nombre, set_ubicacion, set_estado);
     }
 
     public SQLException crearSetGrabacion() {
-        String sql = "INSERT INTO setgrabacion(set_tamanio, set_nombre, set_ubicacion, set_estado) VALUES ('" + getSet_tamanio() + "', '" + getSet_nombre() + "', '" + getSet_ubicacion() + "', 'A');";
+        String sql = "INSERT INTO evento(set_tamanio, set_nombre, set_ubicacion, set_estado) VALUES ('" + getSet_tamanio() + "', '" + getSet_nombre() + "', '" + getSet_ubicacion() + "', 'A');";
 
         return conpg.accion(sql);
     }
 
     public SQLException modificarSetGrabacion() {
-        String sql = "UPDATE setgrabacion SET set_nombre = '" + getSet_nombre() + "', set_tamanio = '" + getSet_tamanio() + "', set_ubicacion = '" + getSet_ubicacion() + "' where set_codigo = " + getSet_codigo() + ";";
+        String sql = "UPDATE evento SET set_nombre = '" + getSet_nombre() + "', set_tamanio = '" + getSet_tamanio() + "', set_ubicacion = '" + getSet_ubicacion() + "' where set_codigo = " + getSet_codigo() + ";";
 
         return conpg.accion(sql);
     }
 
     public SQLException eliminarSetGrabacion(int codigoSetGrab) {
-        String sql = "UPDATE setgrabacion SET set_estado= 'I' where set_codigo = " + codigoSetGrab + ";";
+        String sql = "UPDATE evento SET set_estado= 'I' where set_codigo = " + codigoSetGrab + ";";
 
         return conpg.accion(sql);
     }
 
-    public List<SetGrabacion> listaSetGrabTabla() {
+    public List<Evento> listaSetGrabTabla() {
         try {
-            List<SetGrabacion> lista = new ArrayList<>();
+            List<Evento> lista = new ArrayList<>();
 
-            String sql = "select * from setgrabacion where set_estado = 'A'";
+            String sql = "select * from evento where set_estado = 'A'";
 
             ResultSet rs = conpg.consulta(sql); //La consulta nos devuelve un "ResultSet"
 
             //Pasar de "ResultSet" a "List"
             while (rs.next()) {
 
-                SetGrabacion set = new SetGrabacion();
+                Evento set = new Evento();
 
                 set.setSet_codigo(rs.getInt("set_codigo"));
                 set.setSet_nombre(rs.getString("set_nombre"));
@@ -71,18 +71,18 @@ public class ModeloSetGrab extends SetGrabacion {
         }
     }
 
-    public List<SetGrabacion> buscarSetGrabacion(String nombre) {
+    public List<Evento> buscarSetGrabacion(String nombre) {
         try {
-            List<SetGrabacion> lista = new ArrayList<>();
+            List<Evento> lista = new ArrayList<>();
 
-            String sql = "select * from setgrabacion where set_estado = 'A' and Lower(set_nombre) like '" + nombre.toLowerCase() + "%'"; //Paso a minuscula el nombre del curso que esta 
+            String sql = "select * from evento where set_estado = 'A' and Lower(set_nombre) like '" + nombre.toLowerCase() + "%'"; //Paso a minuscula el nombre del curso que esta 
             //guardado en la BD y tambien paso a minuscula el nombre recuperado del txr para poder comparar los nombres. Sin importar si esta en mayuscula o en minuscula
 
             ResultSet rs = conpg.consulta(sql); //La consulta nos devuelve un "ResultSet"
 
             //Pasar de "ResultSet" a "List"
             while (rs.next()) {
-                SetGrabacion set = new SetGrabacion();
+                Evento set = new Evento();
 
                 //Todo lo que haga en la sentencia define como voy a extraer los datos
                 set.setSet_codigo(rs.getInt("set_codigo"));

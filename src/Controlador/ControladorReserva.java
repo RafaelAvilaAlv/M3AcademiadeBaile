@@ -4,9 +4,9 @@ import Conexion.ConexionPG;
 import Modelo.Estudiante;
 import Modelo.ModeloEstudiante;
 import Modelo.ModeloReserva;
-import Modelo.ModeloSetGrab;
+import Modelo.ModeloEvento;
 import Modelo.Reserva;
-import Modelo.SetGrabacion;
+import Modelo.Evento;
 import Vista.VistaPrincipal;
 import Vista.VistaReserva;
 import java.awt.event.KeyEvent;
@@ -87,11 +87,11 @@ public class ControladorReserva {
         tabla.setNumRows(0);
         
         ModeloEstudiante modeloEstudiante = new ModeloEstudiante();
-        ModeloSetGrab modeloSetGrab = new ModeloSetGrab();
+        ModeloEvento modeloSetGrab = new ModeloEvento();
         
         List<Reserva> reservas = modelo.listaReservasTabla();
         List<Estudiante> estudiantes = modeloEstudiante.listaEstudiantesTabla();
-        List<SetGrabacion> setsgrabacion = modeloSetGrab.listaSetGrabTabla();
+        List<Evento> setsgrabacion = modeloSetGrab.listaSetGrabTabla();
         
         reservas.stream().forEach(as -> {
             
@@ -223,11 +223,11 @@ public class ControladorReserva {
             vista.getTxtCodigoSet().setVisible(false);
             
             ModeloEstudiante modeloEstudiante = new ModeloEstudiante();
-            ModeloSetGrab modeloSetGrab = new ModeloSetGrab();
+            ModeloEvento modeloSetGrab = new ModeloEvento();
             
             List<Reserva> reservas = modelo.listaReservasTabla();
             List<Estudiante> estudiantes = modeloEstudiante.listaEstudiantesTabla();
-            List<SetGrabacion> setsgrabacion = modeloSetGrab.listaSetGrabTabla();
+            List<Evento> setsgrabacion = modeloSetGrab.listaSetGrabTabla();
             
             reservas.stream().forEach(res -> {
                 
@@ -436,13 +436,13 @@ public class ControladorReserva {
     
     public void cargarRegistroDeSet() {
         
-        ModeloSetGrab modeloSetgrab = new ModeloSetGrab();
+        ModeloEvento modeloSetgrab = new ModeloEvento();
         
         vista.getTblDlgjSet().setRowHeight(25);
         DefaultTableModel estructuraTabla = (DefaultTableModel) vista.getTblDlgjSet().getModel();
         estructuraTabla.setRowCount(0);
         
-        List<SetGrabacion> listap = modeloSetgrab.listaSetGrabTabla();
+        List<Evento> listap = modeloSetgrab.listaSetGrabTabla();
         
         Holder<Integer> i = new Holder<>(0);
         
@@ -463,8 +463,8 @@ public class ControladorReserva {
             JOptionPane.showMessageDialog(null, "Aun no ha seleccionado una fila");
         } else {
             
-            ModeloSetGrab modeloSetgrab = new ModeloSetGrab();
-            List<SetGrabacion> listap = modeloSetgrab.listaSetGrabTabla();
+            ModeloEvento modeloSetgrab = new ModeloEvento();
+            List<Evento> listap = modeloSetgrab.listaSetGrabTabla();
             
             listap.stream().forEach(c -> {
                 
@@ -496,12 +496,12 @@ public class ControladorReserva {
             @Override
             public void keyReleased(KeyEvent e) {
                 
-                ModeloSetGrab modeloSetgrab = new ModeloSetGrab();
+                ModeloEvento modeloSetgrab = new ModeloEvento();
                 
                 DefaultTableModel tabla = (DefaultTableModel) vista.getTblDlgjSet().getModel();
                 tabla.setNumRows(0);
                 
-                List<SetGrabacion> instrumento = modeloSetgrab.buscarSetGrabacion(vista.getTxtBuscarSet().getText());
+                List<Evento> instrumento = modeloSetgrab.buscarSetGrabacion(vista.getTxtBuscarSet().getText());
                 instrumento.stream().forEach(p -> {
                     String[] datos = {String.valueOf(p.getSet_codigo()), p.getSet_nombre(), p.getSet_ubicacion()};
                     tabla.addRow(datos);
