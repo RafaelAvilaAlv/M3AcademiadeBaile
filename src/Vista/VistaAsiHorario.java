@@ -284,15 +284,16 @@ public class VistaAsiHorario extends javax.swing.JInternalFrame {
 
         jDlgBuscarCurso.setResizable(false);
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setBackground(new java.awt.Color(255, 153, 153));
 
-        btnCargarCur.setBackground(new java.awt.Color(255, 255, 255));
+        btnCargarCur.setBackground(new java.awt.Color(255, 153, 153));
         btnCargarCur.setFont(new java.awt.Font("Roboto Medium", 0, 13)); // NOI18N
         btnCargarCur.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/asignar.png"))); // NOI18N
         btnCargarCur.setText("Cargar");
         btnCargarCur.setBorder(null);
 
         jLabel19.setFont(new java.awt.Font("Roboto Black", 0, 18)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(255, 255, 255));
         jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/diploma (1).png"))); // NOI18N
         jLabel19.setText("Cargar curso");
 
@@ -322,24 +323,25 @@ public class VistaAsiHorario extends javax.swing.JInternalFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel19)
-                        .addContainerGap(342, Short.MAX_VALUE))
+                        .addGap(0, 31, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel17)
                         .addGap(30, 30, 30)
                         .addComponent(txtBuscarCur, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnCargarCur, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(30, 30, 30))))
+                        .addGap(30, 30, 30))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(158, 158, 158)
+                        .addComponent(jLabel19)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(25, 25, 25)
                 .addComponent(jLabel19)
-                .addGap(40, 40, 40)
+                .addGap(26, 26, 26)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel17)
                     .addComponent(txtBuscarCur, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -362,9 +364,10 @@ public class VistaAsiHorario extends javax.swing.JInternalFrame {
 
         jDlgBuscarHorario.setResizable(false);
 
-        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel3.setBackground(new java.awt.Color(255, 153, 153));
 
         jLabel20.setFont(new java.awt.Font("Roboto Black", 0, 18)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(255, 255, 255));
         jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/calendario.png"))); // NOI18N
         jLabel20.setText("Cargar horario");
 
@@ -385,7 +388,7 @@ public class VistaAsiHorario extends javax.swing.JInternalFrame {
         ));
         jScrollPane3.setViewportView(tblDlgjHorario);
 
-        btnCargarHor.setBackground(new java.awt.Color(255, 255, 255));
+        btnCargarHor.setBackground(new java.awt.Color(255, 153, 153));
         btnCargarHor.setFont(new java.awt.Font("Roboto Medium", 0, 13)); // NOI18N
         btnCargarHor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/asignar.png"))); // NOI18N
         btnCargarHor.setText("Cargar");
@@ -397,24 +400,25 @@ public class VistaAsiHorario extends javax.swing.JInternalFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(22, 22, 22)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel20)
-                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(jPanel3Layout.createSequentialGroup()
-                            .addComponent(jLabel18)
-                            .addGap(28, 28, 28)
-                            .addComponent(txtBuscarHor, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnCargarHor, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabel18)
+                        .addGap(28, 28, 28)
+                        .addComponent(txtBuscarHor, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnCargarHor, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabel20)
+                        .addGap(145, 145, 145)))
                 .addContainerGap(25, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(19, 19, 19)
                 .addComponent(jLabel20)
-                .addGap(26, 26, 26)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCargarHor)
                     .addComponent(txtBuscarHor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -437,52 +441,55 @@ public class VistaAsiHorario extends javax.swing.JInternalFrame {
 
         jDlgAsignarHorario.setResizable(false);
 
-        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel4.setBackground(new java.awt.Color(255, 153, 153));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         jPanel4.add(txtPeriodoCurso, new org.netbeans.lib.awtextra.AbsoluteConstraints(128, 174, 168, -1));
 
         jLabel2.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
         jLabel2.setText("Periodo:");
         jPanel4.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 177, -1, -1));
-        jPanel4.add(fechaDeAsignacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(617, 70, 166, -1));
+        jPanel4.add(fechaDeAsignacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 80, 166, -1));
 
         jLabel3.setFont(new java.awt.Font("Roboto Black", 0, 28)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/profesor.png"))); // NOI18N
         jLabel3.setText("Asignar horario ");
-        jPanel4.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 13, -1, -1));
+        jPanel4.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 20, -1, -1));
 
-        btnGuardar.setBackground(new java.awt.Color(255, 255, 255));
+        btnGuardar.setBackground(new java.awt.Color(255, 153, 153));
         btnGuardar.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
         btnGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/guardar.png"))); // NOI18N
         btnGuardar.setText("Guardar");
         btnGuardar.setBorder(null);
-        btnGuardar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnGuardar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanel4.add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(218, 462, 95, -1));
 
         jLabel6.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
         jLabel6.setText("Nombre:");
         jPanel4.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 112, -1, -1));
 
-        btnCancelar.setBackground(new java.awt.Color(255, 255, 255));
+        btnCancelar.setBackground(new java.awt.Color(255, 153, 153));
         btnCancelar.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
         btnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton-x.png"))); // NOI18N
         btnCancelar.setText("Cancelar");
         btnCancelar.setBorder(null);
-        btnCancelar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnCancelar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanel4.add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 460, 96, 31));
         jPanel4.add(txtNombreCurso, new org.netbeans.lib.awtextra.AbsoluteConstraints(128, 109, 168, -1));
 
         jLabel13.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
         jLabel13.setText("Fecha de asignación:");
-        jPanel4.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 70, -1, -1));
+        jPanel4.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 80, -1, -1));
+
+        txtCodigoCurso.setBackground(new java.awt.Color(255, 153, 153));
         jPanel4.add(txtCodigoCurso, new org.netbeans.lib.awtextra.AbsoluteConstraints(254, 145, 42, -1));
 
-        btnBuscarCurso.setBackground(new java.awt.Color(255, 255, 255));
+        btnBuscarCurso.setBackground(new java.awt.Color(255, 153, 153));
         btnBuscarCurso.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
         btnBuscarCurso.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/buscar.png"))); // NOI18N
         btnBuscarCurso.setText("Buscar");
         btnBuscarCurso.setBorder(null);
-        btnBuscarCurso.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnBuscarCurso.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnBuscarCurso.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jPanel4.add(btnBuscarCurso, new org.netbeans.lib.awtextra.AbsoluteConstraints(303, 108, -1, -1));
 
@@ -498,14 +505,16 @@ public class VistaAsiHorario extends javax.swing.JInternalFrame {
         jLabel9.setText("Dia:");
         jPanel4.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 277, -1, -1));
         jPanel4.add(txtDiaHorario, new org.netbeans.lib.awtextra.AbsoluteConstraints(128, 274, 168, -1));
+
+        txtCodigoHorario.setBackground(new java.awt.Color(255, 153, 153));
         jPanel4.add(txtCodigoHorario, new org.netbeans.lib.awtextra.AbsoluteConstraints(253, 311, 42, -1));
 
-        btnBuscarHorario.setBackground(new java.awt.Color(255, 255, 255));
+        btnBuscarHorario.setBackground(new java.awt.Color(255, 153, 153));
         btnBuscarHorario.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
         btnBuscarHorario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/buscar.png"))); // NOI18N
         btnBuscarHorario.setText("Buscar");
         btnBuscarHorario.setBorder(null);
-        btnBuscarHorario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnBuscarHorario.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnBuscarHorario.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jPanel4.add(btnBuscarHorario, new org.netbeans.lib.awtextra.AbsoluteConstraints(303, 273, -1, -1));
         jPanel4.add(txtHoraDeInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(127, 339, 168, -1));
@@ -527,47 +536,52 @@ public class VistaAsiHorario extends javax.swing.JInternalFrame {
         );
         jDlgAsignarHorarioLayout.setVerticalGroup(
             jDlgAsignarHorarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, 530, Short.MAX_VALUE)
         );
 
         setBorder(null);
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(204, 81, 81));
 
         jLabel1.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Buscar:");
 
-        btnAsignar.setBackground(new java.awt.Color(255, 255, 255));
+        btnAsignar.setBackground(new java.awt.Color(204, 81, 81));
         btnAsignar.setFont(new java.awt.Font("Roboto Medium", 0, 13)); // NOI18N
+        btnAsignar.setForeground(new java.awt.Color(255, 255, 255));
         btnAsignar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/AñadirDetalles.png"))); // NOI18N
         btnAsignar.setText("Asignar");
         btnAsignar.setBorder(null);
-        btnAsignar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnAsignar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        btnModificar.setBackground(new java.awt.Color(255, 255, 255));
+        btnModificar.setBackground(new java.awt.Color(204, 81, 81));
         btnModificar.setFont(new java.awt.Font("Roboto Medium", 0, 13)); // NOI18N
+        btnModificar.setForeground(new java.awt.Color(255, 255, 255));
         btnModificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/modificar.png"))); // NOI18N
         btnModificar.setText("Modificar");
         btnModificar.setBorder(null);
-        btnModificar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnModificar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        btnActualizar.setBackground(new java.awt.Color(255, 255, 255));
+        btnActualizar.setBackground(new java.awt.Color(204, 81, 81));
         btnActualizar.setFont(new java.awt.Font("Roboto Medium", 0, 13)); // NOI18N
+        btnActualizar.setForeground(new java.awt.Color(255, 255, 255));
         btnActualizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/actualizar.png"))); // NOI18N
         btnActualizar.setText("Actualizar");
         btnActualizar.setBorder(null);
-        btnActualizar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnActualizar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        btnEliminar.setBackground(new java.awt.Color(255, 255, 255));
+        btnEliminar.setBackground(new java.awt.Color(204, 81, 81));
         btnEliminar.setFont(new java.awt.Font("Roboto Medium", 0, 13)); // NOI18N
+        btnEliminar.setForeground(new java.awt.Color(255, 255, 255));
         btnEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/compartimiento.png"))); // NOI18N
         btnEliminar.setText("Eliminar");
         btnEliminar.setBorder(null);
-        btnEliminar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnEliminar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         jtxtTituloMenu.setFont(new java.awt.Font("Roboto Black", 1, 24)); // NOI18N
-        jtxtTituloMenu.setForeground(new java.awt.Color(155, 12, 27));
+        jtxtTituloMenu.setForeground(new java.awt.Color(255, 255, 255));
         jtxtTituloMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/eleccion.png"))); // NOI18N
         jtxtTituloMenu.setText("Asignar horarios");
 

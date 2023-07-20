@@ -480,18 +480,20 @@ public class VistaReserva extends javax.swing.JInternalFrame {
 
         jDlgBuscarEstudiante.setResizable(false);
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setBackground(new java.awt.Color(255, 153, 153));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel19.setFont(new java.awt.Font("Roboto Black", 0, 18)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(255, 255, 255));
         jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/personas.png"))); // NOI18N
         jLabel19.setText("Cargar estudiante");
         jPanel2.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 13, -1, -1));
 
         jLabel17.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
         jLabel17.setText("Buscar:");
-        jPanel2.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 78, -1, -1));
-        jPanel2.add(txtBuscarEstudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(72, 75, 164, -1));
+        jPanel2.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, -1, -1));
+        jPanel2.add(txtBuscarEstudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, 164, -1));
 
         tblDlgEstudiante.setFont(new java.awt.Font("Roboto Light", 0, 14)); // NOI18N
         tblDlgEstudiante.setModel(new javax.swing.table.DefaultTableModel(
@@ -509,18 +511,21 @@ public class VistaReserva extends javax.swing.JInternalFrame {
 
         jPanel2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 135, 661, 260));
 
-        btnCargarEstudiante.setBackground(new java.awt.Color(255, 255, 255));
+        btnCargarEstudiante.setBackground(new java.awt.Color(255, 153, 153));
         btnCargarEstudiante.setFont(new java.awt.Font("Roboto Medium", 0, 13)); // NOI18N
+        btnCargarEstudiante.setForeground(new java.awt.Color(255, 255, 255));
         btnCargarEstudiante.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/asignar.png"))); // NOI18N
         btnCargarEstudiante.setText("Cargar");
         btnCargarEstudiante.setBorder(null);
-        jPanel2.add(btnCargarEstudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(585, 67, 88, 39));
+        jPanel2.add(btnCargarEstudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 70, 88, 39));
 
         javax.swing.GroupLayout jDlgBuscarEstudianteLayout = new javax.swing.GroupLayout(jDlgBuscarEstudiante.getContentPane());
         jDlgBuscarEstudiante.getContentPane().setLayout(jDlgBuscarEstudianteLayout);
         jDlgBuscarEstudianteLayout.setHorizontalGroup(
             jDlgBuscarEstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jDlgBuscarEstudianteLayout.createSequentialGroup()
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 686, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jDlgBuscarEstudianteLayout.setVerticalGroup(
             jDlgBuscarEstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -529,22 +534,24 @@ public class VistaReserva extends javax.swing.JInternalFrame {
 
         jDlgBuscarSet.setResizable(false);
 
-        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel3.setBackground(new java.awt.Color(255, 153, 153));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnCargarSet.setBackground(new java.awt.Color(255, 255, 255));
+        btnCargarSet.setBackground(new java.awt.Color(255, 153, 153));
         btnCargarSet.setFont(new java.awt.Font("Roboto Medium", 0, 13)); // NOI18N
+        btnCargarSet.setForeground(new java.awt.Color(255, 255, 255));
         btnCargarSet.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/asignar.png"))); // NOI18N
         btnCargarSet.setText("Cargar");
         btnCargarSet.setBorder(null);
         jPanel3.add(btnCargarSet, new org.netbeans.lib.awtextra.AbsoluteConstraints(524, 63, 83, -1));
 
         jLabel20.setFont(new java.awt.Font("Roboto Black", 0, 18)); // NOI18N
-        jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/microfono.png"))); // NOI18N
-        jLabel20.setText("Cargar set musical");
-        jPanel3.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(31, 13, -1, -1));
+        jLabel20.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel20.setText("Cargar Evento");
+        jPanel3.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 10, -1, -1));
 
         jLabel18.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(255, 255, 255));
         jLabel18.setText("Buscar:");
         jPanel3.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 70, -1, -1));
         jPanel3.add(txtBuscarSet, new org.netbeans.lib.awtextra.AbsoluteConstraints(78, 67, 140, -1));
@@ -578,112 +585,116 @@ public class VistaReserva extends javax.swing.JInternalFrame {
 
         jDlgReserva.setResizable(false);
 
-        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel4.setBackground(new java.awt.Color(255, 153, 153));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel3.setFont(new java.awt.Font("Roboto Black", 0, 28)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/reservaa.png"))); // NOI18N
         jLabel3.setText("Reservar set musical");
-        jPanel4.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 13, -1, -1));
+        jPanel4.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 20, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
         jLabel6.setText("Cédula:");
-        jPanel4.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 120, -1, -1));
-        jPanel4.add(txtCedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(94, 117, 196, -1));
-        jPanel4.add(txtCodigoEstudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(304, 154, 42, -1));
+        jPanel4.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, -1, -1));
+        jPanel4.add(txtCedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 140, 196, -1));
 
-        btnBuscarEstudiante.setBackground(new java.awt.Color(255, 255, 255));
+        txtCodigoEstudiante.setBackground(new java.awt.Color(255, 153, 153));
+        jPanel4.add(txtCodigoEstudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 170, 42, -1));
+
+        btnBuscarEstudiante.setBackground(new java.awt.Color(255, 153, 153));
         btnBuscarEstudiante.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
         btnBuscarEstudiante.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/buscar.png"))); // NOI18N
         btnBuscarEstudiante.setText("Buscar");
         btnBuscarEstudiante.setBorder(null);
-        btnBuscarEstudiante.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnBuscarEstudiante.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnBuscarEstudiante.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        jPanel4.add(btnBuscarEstudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(306, 116, -1, -1));
-        jPanel4.add(txtNombreEstudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(94, 178, 201, -1));
+        jPanel4.add(btnBuscarEstudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 140, -1, -1));
+        jPanel4.add(txtNombreEstudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 220, 201, -1));
 
         jLabel2.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
         jLabel2.setText("Nombre:");
-        jPanel4.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 181, -1, -1));
+        jPanel4.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
         jLabel4.setText("Apellido:");
-        jPanel4.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 235, -1, -1));
-        jPanel4.add(txtApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(96, 232, 201, -1));
+        jPanel4.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, -1, -1));
+        jPanel4.add(txtApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 290, 201, -1));
 
         jLabel5.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
         jLabel5.setText("Especificación:");
-        jPanel4.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 420, -1, -1));
+        jPanel4.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 330, 120, -1));
 
-        btnGuardar.setBackground(new java.awt.Color(255, 255, 255));
+        btnGuardar.setBackground(new java.awt.Color(255, 153, 153));
         btnGuardar.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
         btnGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/guardar.png"))); // NOI18N
         btnGuardar.setText("Guardar");
         btnGuardar.setBorder(null);
-        btnGuardar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel4.add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 570, 95, -1));
+        btnGuardar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jPanel4.add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 530, 95, -1));
 
-        btnCancelar.setBackground(new java.awt.Color(255, 255, 255));
+        btnCancelar.setBackground(new java.awt.Color(255, 153, 153));
         btnCancelar.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
         btnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton-x.png"))); // NOI18N
         btnCancelar.setText("Cancelar");
         btnCancelar.setBorder(null);
-        btnCancelar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel4.add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 570, 96, 31));
+        btnCancelar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jPanel4.add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 530, 96, 31));
 
         jLabel13.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
         jLabel13.setText("Fecha en que se registra la reservación:");
-        jPanel4.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 360, -1, -1));
+        jPanel4.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 180, 280, -1));
 
         jLabel12.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
         jLabel12.setText("Nombre del set de grabación:");
-        jPanel4.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 120, -1, -1));
-        jPanel4.add(txtNombreSet, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 120, 201, -1));
-        jPanel4.add(txtCodigoSet, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 150, 38, -1));
-        jPanel4.add(fechaDeReserva, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 360, 201, -1));
+        jPanel4.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 460, -1, -1));
+        jPanel4.add(txtNombreSet, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 460, 130, -1));
 
-        btnBuscarSet.setBackground(new java.awt.Color(255, 255, 255));
+        txtCodigoSet.setBackground(new java.awt.Color(255, 153, 153));
+        jPanel4.add(txtCodigoSet, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 530, 38, -1));
+        jPanel4.add(fechaDeReserva, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 180, 220, -1));
+
+        btnBuscarSet.setBackground(new java.awt.Color(255, 153, 153));
         btnBuscarSet.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
         btnBuscarSet.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/buscar.png"))); // NOI18N
         btnBuscarSet.setText("Buscar");
         btnBuscarSet.setBorder(null);
-        btnBuscarSet.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnBuscarSet.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnBuscarSet.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        jPanel4.add(btnBuscarSet, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 120, -1, -1));
+        jPanel4.add(btnBuscarSet, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 490, -1, -1));
 
         jLabel14.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
         jLabel14.setText("Día que se desea reservar:");
-        jPanel4.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 360, -1, -1));
-        jPanel4.add(fechaDeEntrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 360, 200, -1));
+        jPanel4.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 250, 190, -1));
+        jPanel4.add(fechaDeEntrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 250, 220, -1));
 
         txtAreaEspecificacion.setColumns(20);
         txtAreaEspecificacion.setRows(5);
         jScrollPane4.setViewportView(txtAreaEspecificacion);
 
-        jPanel4.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 410, 275, 108));
+        jPanel4.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 330, 230, 108));
 
         jLabel7.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
         jLabel7.setText("Información del estudiante:");
-        jPanel4.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 78, -1, -1));
+        jPanel4.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, -1, -1));
 
         jLabel8.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
         jLabel8.setText("Información de la reservación:");
-        jPanel4.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, -1, -1));
+        jPanel4.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 90, 220, -1));
 
         jLabel9.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
         jLabel9.setText("Informacion del set de grabación:");
-        jPanel4.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 80, -1, -1));
+        jPanel4.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 390, -1, -1));
 
         jSeparator1.setBackground(new java.awt.Color(0, 0, 0));
-        jPanel4.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, 940, 10));
+        jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jPanel4.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 80, 20, 520));
 
         javax.swing.GroupLayout jDlgReservaLayout = new javax.swing.GroupLayout(jDlgReserva.getContentPane());
         jDlgReserva.getContentPane().setLayout(jDlgReservaLayout);
         jDlgReservaLayout.setHorizontalGroup(
             jDlgReservaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDlgReservaLayout.createSequentialGroup()
-                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 997, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 995, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         jDlgReservaLayout.setVerticalGroup(
             jDlgReservaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -693,50 +704,56 @@ public class VistaReserva extends javax.swing.JInternalFrame {
         setBorder(null);
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(204, 81, 81));
 
         jLabel1.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Buscar:");
 
-        btnReservar.setBackground(new java.awt.Color(255, 255, 255));
+        btnReservar.setBackground(new java.awt.Color(204, 81, 81));
         btnReservar.setFont(new java.awt.Font("Roboto Medium", 0, 13)); // NOI18N
+        btnReservar.setForeground(new java.awt.Color(255, 255, 255));
         btnReservar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/AñadirDetalles.png"))); // NOI18N
         btnReservar.setText("Reservar");
         btnReservar.setBorder(null);
-        btnReservar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnReservar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        btnModificar.setBackground(new java.awt.Color(255, 255, 255));
+        btnModificar.setBackground(new java.awt.Color(204, 81, 81));
         btnModificar.setFont(new java.awt.Font("Roboto Medium", 0, 13)); // NOI18N
+        btnModificar.setForeground(new java.awt.Color(255, 255, 255));
         btnModificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/modificar.png"))); // NOI18N
         btnModificar.setText("Modificar");
         btnModificar.setBorder(null);
-        btnModificar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnModificar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        btnActualizar.setBackground(new java.awt.Color(255, 255, 255));
+        btnActualizar.setBackground(new java.awt.Color(204, 81, 81));
         btnActualizar.setFont(new java.awt.Font("Roboto Medium", 0, 13)); // NOI18N
+        btnActualizar.setForeground(new java.awt.Color(255, 255, 255));
         btnActualizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/actualizar.png"))); // NOI18N
         btnActualizar.setText("Actualizar");
         btnActualizar.setBorder(null);
-        btnActualizar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnActualizar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        btnEliminar.setBackground(new java.awt.Color(255, 255, 255));
+        btnEliminar.setBackground(new java.awt.Color(204, 81, 81));
         btnEliminar.setFont(new java.awt.Font("Roboto Medium", 0, 13)); // NOI18N
+        btnEliminar.setForeground(new java.awt.Color(255, 255, 255));
         btnEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/compartimiento.png"))); // NOI18N
         btnEliminar.setText("Eliminar");
         btnEliminar.setBorder(null);
-        btnEliminar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnEliminar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         jtxtTituloMenu.setFont(new java.awt.Font("Roboto Black", 1, 24)); // NOI18N
-        jtxtTituloMenu.setForeground(new java.awt.Color(155, 12, 27));
+        jtxtTituloMenu.setForeground(new java.awt.Color(255, 255, 255));
         jtxtTituloMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/reservaa.png"))); // NOI18N
         jtxtTituloMenu.setText("Reserva");
 
-        btnImprimir.setBackground(new java.awt.Color(255, 255, 255));
+        btnImprimir.setBackground(new java.awt.Color(204, 81, 81));
         btnImprimir.setFont(new java.awt.Font("Roboto Medium", 0, 13)); // NOI18N
+        btnImprimir.setForeground(new java.awt.Color(255, 255, 255));
         btnImprimir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/imprimir.png"))); // NOI18N
         btnImprimir.setText("Imprimir");
         btnImprimir.setBorder(null);
-        btnImprimir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnImprimir.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
