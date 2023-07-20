@@ -7,8 +7,8 @@ import Modelo.ModeloDirector_artistico;
 import Modelo.ModeloPersona;
 import Modelo.Persona;
 import Modelo.Director_artistico;
+import Vista.VistaDirector_artistico;
 import Vista.VistaPrincipal;
-import Vista.VistaProductor;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.text.ParseException;
@@ -34,13 +34,13 @@ import net.sf.jasperreports.view.JasperViewer;
 public class ControladorDirector_artistico {
 
     ModeloDirector_artistico modelo;
-    VistaProductor vista;
+    VistaDirector_artistico vista;
 
     static boolean asignar;
 
     VistaPrincipal p = new VistaPrincipal();
 
-    public ControladorDirector_artistico(ModeloDirector_artistico modelo, VistaProductor vista) {
+    public ControladorDirector_artistico(ModeloDirector_artistico modelo, VistaDirector_artistico vista) {
         this.modelo = modelo;
         this.vista = vista;
         vista.setVisible(true);
